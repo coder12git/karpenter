@@ -9,7 +9,6 @@ on:
     - cron: '0 12 * * *'
 permissions:
   contents: read
-
 jobs:
   analyze-go:
     name: Analyze Go
