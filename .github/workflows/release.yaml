@@ -19,7 +19,7 @@ jobs:
         run: echo "tag_name=${GITHUB_REF#refs/*/}" >> "$GITHUB_OUTPUT"
 
       - name: Install tejolote
-        uses: coder12git/release-actions/setup-tejolote@dd08496c83441d6477114cc0555b96d404dacff7 # v0.1.2
+        uses: kubernetes-sigs/release-actions/setup-tejolote@dd08496c83441d6477114cc0555b96d404dacff7 # v0.1.2
 
       - run: |
           tejolote attest --artifacts github://coder12git/karpenter/${{ github.ref_name }} github://coder12git/karpenter/"${{ github.run_id }}" --output karpenter.intoto.json --sign
